@@ -15,8 +15,8 @@ function Message({ message }) {
   return (
     <div>
       <div className="p-4">
-        <div className={`chat ${chatName}`}>
-          <div className={`chat-bubble text-white ${chatColor}`}>
+        <div  className={`chat ${chatName}`}>
+          <div  className={`chat-bubble text-white ${chatColor}`}>
             {message.message}
           </div>
           <div className="chat-footer">{formattedTime}</div>

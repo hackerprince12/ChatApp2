@@ -4,16 +4,20 @@ import useGetAllUsers from "../../context/useGetAllUsers";
 import useConversation from "../../zustand/useConversation";
 import toast from "react-hot-toast";
 function Search() {
+
   const [search, setSearch] = useState("");
   const [allUsers] = useGetAllUsers();
   const { setSelectedConversation } = useConversation();
   console.log(allUsers);
+
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!search) return;
     const conversation = allUsers.find((user) =>
       user.fullname?.toLowerCase().includes(search.toLowerCase())
     );
+
     if (conversation) {
       setSelectedConversation(conversation);
       setSearch("");
@@ -21,6 +25,9 @@ function Search() {
       toast.error("User not found");
     }
   };
+
+
+
   return (
     <div className=" h-[10vh]">
       <div className="px-6 py-4">

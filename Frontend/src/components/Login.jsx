@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { useAuth } from "../context/AuthProvider";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
+import './Login.css';
 
 function Login() {
   const [authUser, setAuthUser] = useAuth();
@@ -37,12 +38,12 @@ function Login() {
   };
   return (
     <>
-      <div className="flex h-screen items-center justify-center">
+      <div  className="flex  h-screen items-center justify-center">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="border border-white px-6 py-2 rounded-md space-y-3 w-96"
+           className="border border-white px-6 py-2 rounded-md space-y-3 w-96"
         >
-          <h1 className="text-2xl text-center">
+          <h1 className="text-3xl text-center">
             Chat<span className="text-green-500 font-semibold">App</span>
           </h1>
           <h2 className="text-xl text-white font-bold">Login</h2>

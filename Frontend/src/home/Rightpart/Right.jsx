@@ -12,7 +12,7 @@ function Right() {
     return setSelectedConversation(null);
   }, [setSelectedConversation]);
   return (
-    <div className="w-full bg-slate-900 text-gray-300">
+    <div className="w-full bg-slate-800  text-gray-300">
       <div>
         {!selectedConversation ? (
           <NoChatSelected />
@@ -21,7 +21,7 @@ function Right() {
             <Chatuser />
             <div
               className=" flex-1 overflow-y-auto"
-              style={{ maxHeight: "calc(92vh - 8vh)" }}
+              style={{ maxHeight: "calc(90vh - 10vh)" }}
             >
               <Messages />
             </div>
